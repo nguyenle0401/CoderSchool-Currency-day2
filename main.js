@@ -9,7 +9,7 @@ function vndToUsd(amount) {
 }
 
 function usdToVnd(amount) {
-  return amount*exchangeRate.toFixed(2);
+  return (amount*exchangeRate).toFixed(2);
 }
 
 let type;
@@ -25,7 +25,7 @@ let type;
 //     break;
 // }
 
-if (currencyUnit = "vnd"){
+if (currencyUnit === "vnd"){
   result = vndToUsd(amount);
   type = "USD"
 }else{
