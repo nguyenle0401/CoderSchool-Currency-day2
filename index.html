@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="container-fluid text-body bg-warning text-center">
+
+        <h1 class="font-weight-bold style-1">Currency converter</h1>
+        <span class=style-2>From Currency</span>:<input type="number" id="amountInput" />
+        <select name="curency" id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+            <option value="EUR">EUR</option>
+            <option value="KRW">KRW</option>
+        </select>
+        
+       <span class=style-2>To Currency:</span>
+            <select name="currency" id="toCurrency">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+            <option value="EUR">EUR</option>
+            <option value="KRW">KRW</option>
+        </select>
+        <div>
+            <button class="mt-4 mb-3 botton-1" onclick="convert()">Convert!</button>
+        </div>
+
+        <h2 id="resultArea">Result is here</h2>
+    </div>
+
+    <!-- <div id="test">test</div>
+    <button onclick="from()">test</button>
+
+    <div id="test1">test1</div>
+    <button onclick="to()">test</button> -->
+
+
+
+    <script src="main.js"></script>
+
+
 </body>
+
 </html>

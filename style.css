@@ -1,0 +1,24 @@
+.botton-1:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color:rgb(10, 190, 49);
+   
+      }
+      .botton-1{
+        border-radius: 12px;
+        width:100px;
+        height: 30px;
+        font-weight: bold;
+        background-color: aqua;
+      }
+.style-1{
+    font-family: monospace;
+}
+
+body{
+    min-width: 100%;
+    min-height: 100%;
+}
+.style-2{
+    font-weight: bold;
+}
