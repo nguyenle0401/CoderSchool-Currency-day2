@@ -106,7 +106,12 @@ let fromCurrency = document.getElementById("fromCurrency");
   let exRate = getConverter(fromCur,toCur);
   let amountMoney = inputTag.value;
   let result = exRate*amountMoney;
-  document.getElementById("resultArea").innerHTML = `Your money in is ${result}`
+  const formatter = new Intl.NumberFormat(toCur, {
+    currency: toCur,
+    style: "currency"
+  });
+  console.log(formatter.format(result));
+  document.getElementById("resultArea").innerHTML = `Your money in is ${formatter.format(result)}`
  }
 
 function getConverter(from,to){
