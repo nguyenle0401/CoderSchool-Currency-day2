@@ -1,24 +1,33 @@
+
+.botton-1{
+    border-radius: 12px;
+    width:100px;
+    height: 30px;
+    font-weight: bold;
+    background-color: aqua;
+}
 .botton-1:hover{
     cursor: pointer;
     opacity: 0.8;
     background-color:rgb(10, 190, 49);
-   
-      }
-      .botton-1{
-        border-radius: 12px;
-        width:100px;
-        height: 30px;
-        font-weight: bold;
-        background-color: aqua;
-      }
+    border-radius: 12px;
+}
 .style-1{
     font-family: monospace;
 }
 
-body{
+.fs{
     min-width: 100%;
     min-height: 100%;
+    position: absolute;
+    align-items: center;
+    display:flex;
+    justify-content:center;
 }
 .style-2{
     font-weight: bold;
+}
+.v-center{
+    position: absolute;
+    align-self: center;
 }
