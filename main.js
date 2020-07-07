@@ -85,38 +85,6 @@
 //   // console.log("your money in USD is ", result);
 // }
 
-
-let inputTag = document.getElementById("amountInput");
-
-let fromCurrency = document.getElementById("fromCurrency");
- function from(){
-   let amount = fromCurrency.value;
-   document.getElementById("test").innerHTML = "from currency is: " + amount
- }
-
- let toCurrency = document.getElementById("toCurrency");
- function to(){
-   let amount = toCurrency.value;
-   document.getElementById("test1").innerHTML = "to currency is: " + amount
- }
-
- function convert(){
-  let toCur = toCurrency.value.toLowerCase();
-  let fromCur = fromCurrency.value.toLowerCase();
-  let exRate = getConverter(fromCur,toCur);
-  let amountMoney = inputTag.value;
-  let result = exRate*amountMoney;
-  const formatter = new Intl.NumberFormat(toCur, {
-    currency: toCur,
-    style: "currency"
-  });
-  console.log(formatter.format(result));
-  document.getElementById("resultArea").innerHTML = `Your money in is ${formatter.format(result)}`
- }
-
-function getConverter(from,to){
-return currencyRatio[from][to];
-}
 ////////
 
 const currencyRatio = {
@@ -137,8 +105,30 @@ const currencyRatio = {
     krw: 1,
     eur: 0.00075,
     vnd: 19.47
+  },
+  eur: {
+    usd: 1.11111,
+    krw: 1333.33,
+    eur: 1,
+    vnd: 25641.02
   }
 };
+
+function convert(){
+  let toCur = document.getElementById("toCurrency").value.toLowerCase();
+  let fromCur = document.getElementById("fromCurrency").value.toLowerCase();
+  let amountMoney = document.getElementById("amountInput").value;
+  let result = currencyRatio[fromCur][toCur]*amountMoney;
+  const formatter = new Intl.NumberFormat(toCur, {
+    currency: toCur,
+    style: "currency"
+  });
+  // fromCurrency.addEventListener("click", function() 
+  // {console.log(fromCur);});
+  document.getElementById("resultArea").innerHTML = `Your money in ${toCur.toUpperCase()} is: ${formatter.format(result)}`
+}
+
+
  
 
 
